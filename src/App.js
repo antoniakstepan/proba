@@ -8,7 +8,7 @@ import Profile from './Components/Profile';
 
 
 function App() {
-  return (
+  return (//
     <div className="app-wrapper">
       {/* <header className="header">
            <img alt="My logo"src="https://www.w3schools.com/w3css/img_lights.jpg"/>
