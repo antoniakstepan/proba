@@ -7,10 +7,18 @@ const MyPosts = ()=>{
     return (
         <div>
             My Posts
-            <div>New Post</div>
+            <div>
+                New Post
+                <div>
+                <textarea></textarea>
+               <button>Add</button>
+                </div>
+               
+                </div>
+
             <div className={classes.posts}>
-               <Post/>
-               <Post/>
+               <Post massage="I am Stepan"/>
+               <Post massage="Hello world"/>
             </div>
         </div>
     )
