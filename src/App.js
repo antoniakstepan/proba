@@ -1,13 +1,14 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import Dialogs from './Components/Dialogs/Dialogs';
 import Header from './Components/Header/Header';
 import Nav from './Components/Nav/Nav';
 import Profile from './Components/Profile/Profile';
 
 
 
-function App() {
+function App(props) {
   return (//
     <div className="app-wrapper">
       {/* <header className="header">
@@ -41,7 +42,12 @@ function App() {
          </div>
          </div>Замість цього буде компонента <Profile/> */}
 
-      <Profile />
+      {/* <Profile /> */}
+      <div className="app-wrapper-content">
+     
+      <Dialogs />
+      </div>
+      
     </div>
   );
 
