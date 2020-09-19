@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import classes from './Nav.module.css'
 
 
@@ -6,11 +7,22 @@ import classes from './Nav.module.css'
 const Nav = () => {
     return (
         <nav className={classes.nav}>
-            <div className={classes.item}><a href="/Profile">Profile</a></div>
-            <div className={`${classes.item} ${classes.active}`}><a href="/Dialogs">Massages</a></div>
-            <div className={classes.item}><a href="/News">News</a></div>
-            <div className={classes.item}><a href="/Music">Music</a></div>
-            <div className={classes.item}><a href="/Settings">Settings</a></div>
+            <div className={classes.item}>
+                {/* <a href="/Profile">Profile</a> */}
+                <NavLink to="/profile" activeClassName={classes.active}>Profile</NavLink>
+                </div>
+            <div className={`${classes.item} ${classes.active}`}>
+                <NavLink to="/Dialogs" activeClassName={classes.active}>Massages</NavLink>
+                </div>
+            <div className={classes.item}>
+                <NavLink to="/News" activeClassName={classes.active}>News</NavLink>
+                </div>
+            <div className={classes.item}>
+                <NavLink to="/Music" activeClassName={classes.active}>Music</NavLink>
+                </div>
+            <div className={classes.item}>
+                <NavLink to="/Settings" activeClassName={classes.active}>Settings</NavLink>
+                </div>
         </nav>
     )
 }
