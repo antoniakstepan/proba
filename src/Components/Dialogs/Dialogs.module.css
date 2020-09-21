@@ -5,15 +5,19 @@
 .dialogsItems{
  padding: 10px;
 }
-.item{
+/* .item{
 
-}
+} */
 .dialogsItems .active{
     color: sandybrown;
 }
-.messages{
+/* .messages{
 padding: 10px;
 }
 .message{
 
+} */
+
+.item a{
+  text-decoration: none;
 }

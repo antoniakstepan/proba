@@ -3,22 +3,25 @@ import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
 
-const MyPosts = ()=>{
+const MyPosts = () => {
     return (
-        <div>
+        <div className={classes.MyPostsBlock}>
             My Posts
             <div>
                 New Post
                 <div>
-                <textarea></textarea>
-               <button>Add</button>
-                </div>
-               
+                    <div>
+                        <textarea></textarea>
+                    </div>
+
+                    <button>Add</button>
                 </div>
 
+            </div>
+
             <div className={classes.posts}>
-               <Post massage="I am Stepan"/>
-               <Post massage="Hello world"/>
+                <Post massage="I am Stepan" />
+                <Post massage="Hello world" />
             </div>
         </div>
     )
