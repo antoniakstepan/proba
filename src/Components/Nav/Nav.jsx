@@ -8,21 +8,21 @@ const Nav = () => {
     return (
         <nav className={classes.nav}>
             <div className={classes.item}>
-                {/* <a href="/Profile">Profile</a> */}
+
                 <NavLink to="/profile" activeClassName={classes.active}>Profile</NavLink>
-                </div>
+            </div>
             <div className={`${classes.item} ${classes.active}`}>
                 <NavLink to="/Dialogs" activeClassName={classes.active}>Massages</NavLink>
-                </div>
+            </div>
             <div className={classes.item}>
                 <NavLink to="/News" activeClassName={classes.active}>News</NavLink>
-                </div>
+            </div>
             <div className={classes.item}>
                 <NavLink to="/Music" activeClassName={classes.active}>Music</NavLink>
-                </div>
+            </div>
             <div className={classes.item}>
                 <NavLink to="/Settings" activeClassName={classes.active}>Settings</NavLink>
-                </div>
+            </div>
         </nav>
     )
 }
