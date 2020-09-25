@@ -11,6 +11,9 @@ import Settings from './Components/Settings/Settings';
 
 
 
+
+
+
 function App(props) {
 
   return (//
@@ -20,9 +23,9 @@ function App(props) {
         <Nav />
         <div className="app-wrapper-content">
 
-          <Route path="/profile" render={() => <Profile state={props.state.profileData} />} />
+          <Route path="/profile" render={() => <Profile state={props.state.profileData} addPost={props.addPost} />} />
 
-          <Route path="/dialogs" render={() => <Dialogs state = {props.state.dialogData}/>} />
+          <Route path="/dialogs" render={() => <Dialogs state = {props.state.dialogData} addMessage={props.state.addMessage}/>} />
 
           <Route path="/news" render={() => <News />} />
 

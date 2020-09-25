@@ -20,10 +20,30 @@
           
           ]
       }
-
+    
       
       
   }
+  export let addPost = (addMessage)=>{
+    
+    let newPost={
+      id:5,
+      message:addMessage,
+      likeCount:0
+    }
+
+   state.profileData.posts.push(newPost)
+
+ }
+ export let addMessage = (message)=>{
+ 
+   let newMessage ={
+     id:3,
+     message:message
+   }
+   state.dialogData.messages.push(newMessage)
+ }
+
 
 
 
