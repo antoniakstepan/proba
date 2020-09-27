@@ -1,5 +1,4 @@
-
-
+import {renderEnteirTree} from './../render';
   let state ={
       dialogData:{
         dialogs:[
@@ -26,13 +25,15 @@
   }
   export let addPost = (addMessage)=>{
     
+    
     let newPost={
       id:5,
       message:addMessage,
       likeCount:0
     }
 
-   state.profileData.posts.push(newPost)
+   state.profileData.posts.push(newPost);
+   renderEnteirTree(state);
 
  }
  export let addMessage = (message)=>{
@@ -41,7 +42,9 @@
      id:3,
      message:message
    }
-   state.dialogData.messages.push(newMessage)
+   state.dialogData.messages.push(newMessage);
+   renderEnteirTree(state);
+
  }
 
 
