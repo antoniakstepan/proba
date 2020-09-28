@@ -23,7 +23,7 @@ function App(props) {
         <Nav />
         <div className="app-wrapper-content">
 
-          <Route path="/profile" render={() => <Profile state={props.state.profileData} addPost={props.addPost} />} />
+          <Route path="/profile" render={() => <Profile profileData={props.state.profileData} addPost={props.addPost} changeNewPostText={props.changeNewPostText} />} />
 
           <Route path="/dialogs" render={() => <Dialogs state = {props.state.dialogData} addMessage={props.state.addMessage}/>} />
 

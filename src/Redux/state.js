@@ -17,24 +17,31 @@ import {renderEnteirTree} from './../render';
             { id: "1", message: "How are you?", likeCount: "0" },
             { id: "2", message: "Hello world", likeCount: "13" }
           
-          ]
+          ],
+          newPostText:"Well done"
+          
       }
     
       
       
   }
-  export let addPost = (addMessage)=>{
+  window.state=state;
+  export let addPost = ()=>{
     
     
     let newPost={
       id:5,
-      message:addMessage,
+      message:state.profileData.newPostText,
       likeCount:0
     }
 
    state.profileData.posts.push(newPost);
    renderEnteirTree(state);
-
+   
+ }
+ export let changeNewPostText =(newText)=>{
+   state.profileData.newPostText=newText;
+   renderEnteirTree(state);
  }
  export let addMessage = (message)=>{
  
