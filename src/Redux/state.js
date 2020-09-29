@@ -1,4 +1,6 @@
-import {renderEnteirTree} from './../render';
+let  renderEnteirTree =()=>{
+  console.log('state change')
+}
   let state ={
       dialogData:{
         dialogs:[
@@ -26,7 +28,7 @@ import {renderEnteirTree} from './../render';
       
   }
   window.state=state;
-  export let addPost = ()=>{
+  export const addPost = ()=>{
     
     
     let newPost={
@@ -36,24 +38,26 @@ import {renderEnteirTree} from './../render';
     }
 
    state.profileData.posts.push(newPost);
-   renderEnteirTree(state);
+   renderEnteirTree();
    
  }
- export let changeNewPostText =(newText)=>{
+ export const changeNewPostText =(newText)=>{
    state.profileData.newPostText=newText;
    renderEnteirTree(state);
  }
- export let addMessage = (message)=>{
+ export const addMessage = (message)=>{
  
    let newMessage ={
      id:3,
      message:message
    }
    state.dialogData.messages.push(newMessage);
-   renderEnteirTree(state);
+   renderEnteirTree();
 
  }
-
+export const subscribe=(observer)=>{
+  renderEnteirTree= observer//Патерн observe Вивичити !!!!
+}
 
 
 
